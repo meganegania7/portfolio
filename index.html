@@ -69,6 +69,159 @@
     a:hover {
       text-decoration: underline;
     }
+    .photo-gallery {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.photo-row {
+  display: flex;
+  gap: 20px;
+}
+
+.photo-left,
+.photo-right {
+  flex: 1;
+}
+
+.photo-pair {
+  display: flex;
+  gap: 10px;
+}
+
+.photo-pair img {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.photo-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-right img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.program-examples {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 600px;
+}
+
+.program-examples h2 {
+  color: #1a73e8;
+  border-bottom: 2px solid #1a73e8;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+}
+
+.vertical-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.vertical-gallery img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.image-comment-box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  gap: 20px;
+  flex-wrap: wrap; /* スマホ対応にも有効 */
+}
+
+.image-comment-box img {
+  max-width: 500px; /* 画像を少し大きく */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.comment {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 4px solid #007ACC;
+  word-wrap: break-word; /* 長い単語の折り返し */
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+
+    /*.profile-photo {
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+      border: 3px solid #007bff;
+      margin-top: 10px;
+    }
+    .photo-gallery {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .gallery-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .gallery-row img {
+      width: 30%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .custom-gallery {
+      margin: 40px auto;
+      max-width: 1000px;
+      text-align: center;
+    }
+
+    .gallery-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .left-column,
+    .right-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .left-column img,
+    .right-column img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }*/
+
   </style>
 </head>
 <body>
@@ -78,10 +231,45 @@
   </header>
 
   <main>
-    <section>
+      <!--<section class="section">
       <h2>1. Introduction</h2>
       <p>I am a freelance professional engaged in research, education, and automation programming, working with multiple companies remotely. I focus on solving problems and delivering value through customized tools and clear communication.</p>
+      <img src="profile1.jpg" alt="profile_photo1" class="profile-photo">
+      </section>
+      <section class="photo-gallery">
+      <h2>Photo Gallery</h2>
+      <div class="gallery-row">
+      <img src="profile1.jpg" alt="Photo 1" />
+      <img src="profile2.jpg" alt="Photo 2" />
+      <img src="profile3.jpg" alt="Photo 3" />
+      </div>
+      </section>-->
+    <section class="photo-gallery">
+      <h2>1. Introduction</h2>
+      <p>I am a freelance professional engaged in research, education, and automation programming, working with multiple companies remotely. I focus on solving problems and delivering value through customized tools and clear communication.</p>
+      <div class="photo-row">
+        <div class="photo-left">
+          <div class="photo-pair">
+            <img src="profile1.jpg" alt="Photo 1">
+            <img src="profile2.jpg" alt="Photo 2">
+          </div>
+        </div>
+        <div class="photo-right">
+          <img src="profile3.jpg" alt="Photo 3">
+        </div>
+      </div>
     </section>
+      <!--<div class="gallery-container">
+       <div class="left-column">
+       <img src="profile1.jpg" alt="Photo 1" />
+       <img src="profile2.jpg" alt="Photo 2" />
+       </div>
+       <div class="right-column">
+       <img src="profile3.jpg" alt="Photo 3" />
+       </div>
+       </div>
+    </section>-->
+
 
     <section>
       <h2>2. Profile</h2>
@@ -138,6 +326,36 @@
       </table>
     </section>
 
+    <!--<section class="program-examples">
+      <h2>Program Examples</h2>
+        <div class="vertical-gallery">
+          <img src="example1.jpg" alt="Program Example 1">
+          <img src="example2.jpg" alt="Program Example 2">
+          <img src="example3.jpg" alt="Program Example 3">
+        </div>
+    </section>
+  -->
+
+    <section>
+  <h2>Program Snapshots with Comments</h2>
+
+  <div class="image-comment-box">
+    <img src="example1.jpg" alt="Example 1">
+    <div class="comment">A web scraping tool that extracts information from a specific website and saves it in Excel format, built with Python, BeautifulSoup, and OpenPyXL</div>
+  </div>
+
+  <div class="image-comment-box">
+    <img src="example2.jpg" alt="Example 2">
+    <div class="comment">A Java-based book management system designed for children, implemented using Servlets and PostgreSQL</div>
+  </div>
+
+  <div class="image-comment-box">
+    <img src="example3.jpg" alt="Example 3">
+    <div class="comment">An admin panel for an image-based authentication login system, built with Python and FastAPI</div>
+  </div>
+</section>
+
+
     <section>
       <h2>6. Work Style & Strengths</h2>
       <ul>
@@ -152,8 +370,11 @@
       <h2>7. Contact</h2>
       <p>Please feel free to reach out for collaborations or business inquiries:</p>
       <ul>
-        <li>Email: <a href="mailto:meganegania7@gmail.com">meganegania7@gmail.com</a></li>
-        <li>GitHub: <a href="https://meganegania7.github.io/portfolio/">github.com/meganegania7</a></li>
+        <li>Email: <a href="mailto:meganegania1@gmail.com">meganegania1@gmail.com</a></li>
+        <li>GitHub: <a href="https://meganegania7.github.io/portfolio/">github.com/meganegania7/portfolio</a></li>
+        <li>e-net: <a href="https://e-netcorp.jp/archives/staff">e-netcorp.jp/archives/staff</a></li>
+        <li>atglobal: <a href="https://www.atglobal.co.jp/en/">atglobal.co.jp/en/</a></li>
+        <!--<li>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></li>-->
       </ul>
     </section>
   </main>
@@ -163,4 +384,3 @@
   </footer>
 </body>
 </html>
-
